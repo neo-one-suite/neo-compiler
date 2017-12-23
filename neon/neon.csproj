@@ -1,37 +1,72 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Copyright>2016-2017 The Neo Project</Copyright>
-    <AssemblyTitle>Neo.Compiler.MSIL</AssemblyTitle>
-    <Version>2.0.3</Version>
-    <Authors>The Neo Project</Authors>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-    <PlatformTarget>anycpu</PlatformTarget>
-    <AssemblyName>neon</AssemblyName>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B60F7AA4-7A3F-4ADC-81CE-97E4B3E50E30}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <PackageId>Neo.Compiler.MSIL</PackageId>
-    <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
-    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
-    <RootNamespace>Neo.Compiler</RootNamespace>
-    <Company>The Neo Project</Company>
-    <Product>Neo.Compiler.MSIL</Product>
-    <Description>Neo.Compiler.MSIL</Description>
+    <RootNamespace>neon</RootNamespace>
+    <AssemblyName>neon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>RELEASE;NETCOREAPP1_0</DefineConstants>
-    <DebugType>none</DebugType>
-    <DebugSymbols>False</DebugSymbols>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="AntShares.MonoCecil" Version="1.0.0" />
-    <PackageReference Include="Neo.VM" Version="2.0.3" />
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\packages\Mono.Cecil.0.9.6.4\lib\net45\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\packages\Mono.Cecil.0.9.6.4\lib\net45\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\packages\Mono.Cecil.0.9.6.4\lib\net45\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>..\packages\Mono.Cecil.0.9.6.4\lib\net45\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Neo.VM">
+      <HintPath>..\packages\Neo.VM.2.0.4\lib\net461\Neo.VM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="base58.cs" />
+    <Compile Include="FuncExport.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="MyJson.cs" />
+    <Compile Include="NeoModule.cs" />
+    <Compile Include="RIPEMD160Managed.cs" />
+    <Compile Include="MSIL\CctorSubVM.cs" />
+    <Compile Include="MSIL\Conv_Common.cs" />
+    <Compile Include="MSIL\Conv_Multi.cs" />
+    <Compile Include="MSIL\Converter.cs" />
+    <Compile Include="MSIL\ILModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

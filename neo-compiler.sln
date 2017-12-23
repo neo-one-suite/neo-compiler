@@ -1,34 +1,29 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neoa", "neoa\neoa.csproj", "{3D326E22-666D-4EB0-9324-225B0CCA6349}"
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neon", "neon\neon.csproj", "{B60F7AA4-7A3F-4ADC-81CE-97E4B3E50E30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neon", "neon\neon.csproj", "{161C0944-29EB-4BFA-AEF0-60CC598C556F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neoa", "neoa\neoa.csproj", "{3D501C13-1DF5-48B9-A245-AF92FB687F5C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "neoj", "neoj\neoj.csproj", "{5FB7A952-6EAC-4BF9-AD23-AF957EF21925}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neoj", "neoj\neoj.csproj", "{06018C4A-F49F-4D9F-BF7B-18B734F86918}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3D326E22-666D-4EB0-9324-225B0CCA6349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D326E22-666D-4EB0-9324-225B0CCA6349}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D326E22-666D-4EB0-9324-225B0CCA6349}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D326E22-666D-4EB0-9324-225B0CCA6349}.Release|Any CPU.Build.0 = Release|Any CPU
-		{161C0944-29EB-4BFA-AEF0-60CC598C556F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{161C0944-29EB-4BFA-AEF0-60CC598C556F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{161C0944-29EB-4BFA-AEF0-60CC598C556F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{161C0944-29EB-4BFA-AEF0-60CC598C556F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FB7A952-6EAC-4BF9-AD23-AF957EF21925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FB7A952-6EAC-4BF9-AD23-AF957EF21925}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FB7A952-6EAC-4BF9-AD23-AF957EF21925}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FB7A952-6EAC-4BF9-AD23-AF957EF21925}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{B60F7AA4-7A3F-4ADC-81CE-97E4B3E50E30}.Debug|x86.ActiveCfg = Debug|x86
+		{B60F7AA4-7A3F-4ADC-81CE-97E4B3E50E30}.Debug|x86.Build.0 = Debug|x86
+		{B60F7AA4-7A3F-4ADC-81CE-97E4B3E50E30}.Release|x86.ActiveCfg = Release|x86
+		{B60F7AA4-7A3F-4ADC-81CE-97E4B3E50E30}.Release|x86.Build.0 = Release|x86
+		{3D501C13-1DF5-48B9-A245-AF92FB687F5C}.Debug|x86.ActiveCfg = Debug|x86
+		{3D501C13-1DF5-48B9-A245-AF92FB687F5C}.Debug|x86.Build.0 = Debug|x86
+		{3D501C13-1DF5-48B9-A245-AF92FB687F5C}.Release|x86.ActiveCfg = Release|x86
+		{3D501C13-1DF5-48B9-A245-AF92FB687F5C}.Release|x86.Build.0 = Release|x86
+		{06018C4A-F49F-4D9F-BF7B-18B734F86918}.Debug|x86.ActiveCfg = Debug|x86
+		{06018C4A-F49F-4D9F-BF7B-18B734F86918}.Debug|x86.Build.0 = Debug|x86
+		{06018C4A-F49F-4D9F-BF7B-18B734F86918}.Release|x86.ActiveCfg = Release|x86
+		{06018C4A-F49F-4D9F-BF7B-18B734F86918}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
