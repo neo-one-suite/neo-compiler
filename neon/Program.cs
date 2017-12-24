@@ -28,6 +28,7 @@ namespace Neo.Compiler
             }
             string filename = args[0];
             string onlyname = System.IO.Path.GetFileNameWithoutExtension(filename);
+            string dir = System.IO.Path.GetDirectoryName(filename);
             string filepdb = onlyname + ".pdb";
 
             ILModule mod = new ILModule();
@@ -53,7 +54,7 @@ namespace Neo.Compiler
             //load module
             try
             {
-                mod.LoadModule(fs, fspdb);
+                mod.LoadModule(fs, dir, fspdb);
             }
             catch (Exception err)
             {

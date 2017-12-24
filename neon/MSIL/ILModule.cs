@@ -16,9 +16,14 @@ namespace Neo.Compiler.MSIL
         {
 
         }
-        public void LoadModule(System.IO.Stream dllStream, System.IO.Stream pdbStream)
+        public void LoadModule(System.IO.Stream dllStream, string dir, System.IO.Stream pdbStream)
         {
-            this.module = Mono.Cecil.ModuleDefinition.ReadModule(dllStream);
+            Mono.Cecil.DefaultAssemblyResolver resolver = new Mono.Cecil.DefaultAssemblyResolver();
+            Mono.Cecil.ReaderParameters p = new Mono.Cecil.ReaderParameters();
+            p.AssemblyResolver = resolver;
+            resolver.AddSearchDirectory(dir);
+
+            this.module = Mono.Cecil.ModuleDefinition.ReadModule(dllStream, p);
 #if WITHPDB
             if (pdbStream != null)
             {
